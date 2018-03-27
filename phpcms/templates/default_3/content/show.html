@@ -1,0 +1,51 @@
+{template "content","header"}
+<div id="container">
+  <div id="pleft">
+    <div class="leftbox">
+      <h2>联系方式</h2>
+      <ul class="con">
+        <b>成都卫星电视安装</b> <br>
+        <br>
+        联系人：PHPCMS吧 <br>
+        电话：18888888888 <br>
+        手机：18888888888 <br>
+        客服 Q Q：<a target="blank" href="http://wpa.qq.com/msgrd?V=1&amp;Uin=38384741&amp;Site=&amp;Menu=yes"><img src="{CSS_PATH}pa.gif" alt="客服QQ" border="0"></a> <br>
+        地址：吉林省吉林市龙潭区
+      </ul>
+    </div>
+    <div class="leftbox">
+      <h2>产品列表</h2>
+      <ul class="leftp">
+	  {if $top_parentid}
+		{pc:content action="category" catid="$top_parentid" num="15" siteid="$siteid" order="listorder ASC"}
+			{loop $data $r}
+			<li><a href="{$r[url]}">{$r[catname]}</a></li>
+			{/loop}
+        {/pc}
+	{/if}
+      </ul>
+    </div>
+  </div>
+  <div id="pright">
+    <div class="place"><span class="r">当前位置：<a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} </span>
+      <h2><span>{$r[catname]}</span></h2>
+    </div>
+    <div id="viewbox">
+      <div class="title">
+        <h1>{$title}</h1>
+      </div>
+      <div class="info"><small>日期：</small>{$inputtime}<small> 来源：</small>{$copyfrom}</div>
+      <div class="content">
+        <div id="MyContent">{$content}</div>
+      </div>
+      <div class="context">
+        <ul>
+          <li>上一篇：<a href="{$previous_page[url]}">{$previous_page[title]}</a> </li>
+          <li>下一篇：<a href="{$next_page[url]}">{$next_page[title]}</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+{template "content","footer"}

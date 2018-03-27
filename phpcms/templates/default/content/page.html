@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{CSS_PATH}../company/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="main">
+  {template "content","header"}
+  <div class="slider2">
+  <div class="top">
+    <h2><a href="{$CATEGORY[$catid][‘url’]}">{$CATEGORY[$catid]['catname']}</a></h2>
+    <p>企业形象标语</p>
+    </div>
+  </div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="Welcome">
+        <h2> {$title}</h2>
+        <p>{$content}</p>
+        <p>&nbsp;</p>
+      </div>
+      <div class="Box">
+        <h2>下载DooPHP v1.4.1</h2>
+        <p><img src="{IMG_PATH}../company/images/doodownload.png" width="330" height="76" alt="Latest" /></p>
+        <div class="clr"></div>
+        <p>&nbsp;</p>
+        <h2>历史版本</h2>
+		{pc:content  action="position" posid="1"  order="listorder DESC" thumb="1" num="5"} 
+           {loop $data $r}
+           <p><strong><a href="{$r['url']}" title="{str_cut($r['title'],30)}">{$r['title']}</a></strong><br />
+        {str_cut($r[description],112)}<a href="{$r['url']}" class="link">详细</a></p>
+		<div class="bg"></div>
+           {/loop}
+        {/pc}
+ <p>&nbsp;</p>
+ <p><a href="#">更多版本</a></p>
+
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+   {template "content","footer"}
+</div>
+</body>
+</html>

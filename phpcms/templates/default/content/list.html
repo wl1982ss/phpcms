@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{CSS_PATH}../company/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="main">
+  {template "content","header"}
+  <div class="slider2">
+    <div class="top">
+      <h2><a href="{$CATEGORY[$catid][‘url’]}">{$CATEGORY[$catid]['catname']}</a></h2>
+      <p>企业形象标语</p>
+    </div>
+  </div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="Welcome">
+        <h2> 列表页</h2>
+        <p> </p>
+        {pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+        {loop $data $r}
+        <div class="bloga">
+          <h4><a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></h4>
+          <p>{str_cut($r[description],90)}</p>
+        </div>
+        {/loop}
+        <div id="pages" >{$pages}</div>
+        {/pc} </div>
+      <div class="Box">
+        <h2>业务简介</h2>
+        <p class="clients"><em><br />
+          <br />
+          &quot;吉林织梦网络联合PHPCMS吧推出模板开发者合作活动，凡签约模板制作者，皆可获得PHPCMS吧及吉林织梦网络的外包业务。。。&quot;</em><br />
+          <br />
+          <br />
+          <a href="#"><span>-PHPCMS吧</span></a><br />
+          <br />
+          <br />
+        </p>
+        <h2> 联系方式</h2>
+        <p>吉林省吉林市龙潭区新山街1号</p>
+        <p><strong>Tel</strong>: +123456789<br />
+          <strong>Fax</strong>: +123456789<br />
+          <strong>Email</strong>: webmaster@phpcms8.com </p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  {template "content","footer"}
+</div>
+</body>
+</html>

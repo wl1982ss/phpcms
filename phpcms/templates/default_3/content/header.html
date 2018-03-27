@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{IMG_PATH}style.css" rel="stylesheet" media="screen" type="text/css">
+<link href="{IMG_PATH}base.css" rel="stylesheet" media="screen" type="text/css">
+<link href="{IMG_PATH}styles.css" rel="stylesheet" media="screen" type="text/css">
+
+<link href="{IMG_PATH}style_003.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+<body class="index">
+<div id="header">
+  <div id="logo">
+    <h2><a href="{siteurl($siteid)}/">网站名称</a></h2>
+  </div>
+  <div id="tlink">
+    <p>
+      <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="5" width="780">
+      滚动公告
+      </marquee>
+    </p>
+  </div>
+  <div id="nav">
+    <ul id="navMenu">
+	{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+			<li><a href="{siteurl($siteid)}"><span>首页</span></a></li>
+			{loop $data $r}
+			<li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+			{/loop}
+    {/pc}
+    </ul>
+  </div>
+  <div id="banner">
+    <table cellpadding="0" cellspacing="0" width="100%">
+      <tbody>
+        <tr>
+          <td height="250"><embed src="{CSS_PATH}banner.swf" quality="high" extendspage="http://get.adobe.com/flashplayer/" type="application/x-shockwave-flash" wmode="transparent" scale="exactfit" height="250" width="1000"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+﻿input {font:10pt Verdana,Arial,Helvetica,sans-serif,"宋体";color:#999}
+.hdwrap1 a,.hdwrap2 a,.hdwrap3 a,.hdwrap4 a,.hdwrap5 a,.hdwrap6 a {color:#373737;text-decoration:none}
+.hdwrap1 a:hover,.hdwrap2 a:hover,.hdwrap3 a:hover,.hdwrap4 a:hover,.hdwrap5 a:hover,.hdwrap6 a:hover{text-decoration:underline}
+.m_yahei {font-family:"微软雅黑";}
+.hdgray01 {color:#767676;}
+.hdgray01 a {color:#abadac;}
+.hdgray02 {color:#A8A8A8;}
+.hdgray03 {color:#787878;}
+.hdgray03 a {color:#787878;}
+.hdgray04 {color:#d1d1d1}
+.hdgray05 {color:#4d4d4d;}
+.blcolor {color:#1e7abb;}
+.blcolor a {color:#1e7abb;}
+.blcolor1 {color:#3e7094;}
+.blcolor1 a {color:#3e7094;}
+.blhover a:hover {color:#1e7abb;}
+.redhover a:hover {color:#df436f;}
+.h115pxov {height:115px;overflow:hidden;}
+.h138pxov {height:138px;overflow:hidden;}
+.wd145pxov {width:145px;overflow:hidden;}
+.wd105pxov {width:105px;overflow:hidden;}
+.hdwrap {width:608px;margin:0 auto;}
+/*首页图片滚动*/
+.flashlist {height:260px;}
+.flashlist .f_out {height:260px;overflow:hidden;position:relative;z-index:100;}
+.flashlist .f_out .vip01pic,.jcToppic .vip01pic {width:58px;height:58px;display:block;position:absolute;top:0px;left:0px;background:url(../images/vipico.gif) no-repeat 0 0;z-index:200}
+.vip02pic {width:39px;height:39px;display:block;position:absolute;top:0px;left:0px;background:url(../images/vipico.gif) no-repeat -80px 0;z-index:200}
+.flashlist .f_out .picintro {height:60px;background:url(../images/hdpng.png) no-repeat scroll 0 -1px;position:absolute;bottom:0;left:0;width:560px;z-index:999;padding:0 20px;}
+.picintro h2 a {color:#FFF;font-family:"微软雅黑";font-size:14px;font-weight:bold;line-height:26px;}
+.picintro p {color:#767676;line-height:20px;}
+.picintro p a {color:#abadac;}
+.flash_tab {height:20px;background:url(../images/hdbg.gif) no-repeat scroll 0 0;padding-top:10px;}
+.flash_tab .tabs {width:200px;height:8px;overflow:hidden;margin:auto;}
+.flash_tab .tabs ul li {width:33px;height:8px;float:left;display:block;}
+.flash_tab .tabs ul li.opdiv,.noopdiv {padding:0;opacity:1}
+.flash_tab .tabs ul li.opdiv a {width:21px;height:8px;background:url(../images/hdsmall.gif) no-repeat scroll -41px -1239px;display:block;}
+.flash_tab .tabs ul li.opdiv a:hover {background-position:-8px -1239px;}
+.flash_tab .tabs ul li.noopdiv a {width:21px;height:8px;background:url(../images/hdsmall.gif) no-repeat scroll -8px -1239px;display:block;}
+.picintro p{width:560px;line-height:18px;font-size:12px}

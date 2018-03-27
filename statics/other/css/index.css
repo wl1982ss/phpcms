@@ -1,0 +1,36 @@
+#main{width:990px;margin:0 auto;padding:8px 0 0 0}
+.m1{padding:5px;border:#CCC 1px solid;margin:5px 0 0 0}
+.b_L li{border:#CCC 1px solid}
+.b_L ,.b_Z,.b_R{float:left}
+.b_Z{padding:0 8px;width:600px}
+.b_R,.b_L{width:180px}
+.b_R dt{background:url(../images/anli_bg.jpg);line-height:30px;font-size:14px;font-weight:bold;text-align:center;color:#FFF}
+.b_R dd{padding:10px 0 0 0;font-size:12px;line-height:20px;text-indent:2em;height:160px;overflow:scroll;border:dashed #CCC 1px;margin:0 0 5px 0}
+.b_R li{float:left;}
+.b_R li a{display:block;width:88px;border:#CCC 1px solid;line-height:40px;text-align:center;background:#eeeeee;font-size:14px;font-weight:bold;color:#069}
+.b_R li a:hover{background:#333;color:#FFF}
+.dlcp{line-height:26px;font-size:18px;font-weight:bold;padding:10px 0 0 0}
+#marquee6{width:990px;height:100px;overflow:hidden;border:#CCC 1px solid}
+.pinpai li{width:150px;height:100px;float:left;border:#CCC 1px solid;padding:0 20px}
+.pinpai img{width:150px;height:100px;}
+.f1{padding:5px;border:#CCC 1px solid}
+.div_1{padding:20px 0 0 0}
+.c_L ,.c_Z,.c_R{float:left}
+.c_Z{padding:0 8px;width:600px}
+.c_R,.c_L{width:180px}
+.c_L a{color:#078edf;display:block}
+.c_L a:hover{color:#fc3398;background:#ffdddd}
+.c_L img{width:180px;height:115px;border:solid #CCC 1px;}
+.c_L p{line-height:30px;text-align:center;font-size:14px;}
+.F_pu{padding:5px 0 0 5px;border-bottom:#666 3px solid;line-height:30px;}
+.F_pu p{font-size:18px;font-weight:bold;float:left;}
+.F_pu ul{float:right;}
+.F_pu li{float:left;}
+.F_pu li a{border-right:#CCC solid 1px;padding:0 20px;color:#666}
+#main .F_pu li a:hover{text-decoration:underline;}
+.F_pu span{font-size:21px;padding:0 10px 0 0;}
+.c_R p{background:url(../images/anli_bg.jpg);line-height:30px;font-size:14px;font-weight:bold;text-align:center;color:#FFF;}
+.c_R ul{padding:5px 0 0 0;border:dashed #CCC 1px}
+.c_R  li a{color:#078edf;line-height:24px;border-bottom:#CCC 1px dashed;display:block;padding:0 10px;_display:inline}
+.c_R  li a:hover{color:#fc3398;background:#ffdddd}
+

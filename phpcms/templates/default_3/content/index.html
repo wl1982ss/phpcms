@@ -1,0 +1,69 @@
+{template "content","header"}
+<div id="container">
+  <div id="pleft">
+    <div class="leftbox">
+      <h2>联系方式</h2>
+      <ul class="con">
+        <b>成都卫星电视安装</b> <br>
+        <br>
+        联系人：PHPCMS吧 <br>
+        电话：18888888888 <br>
+        手机：18888888888 <br>
+        客服 Q Q：<a target="blank" href="http://wpa.qq.com/msgrd?V=1&amp;Uin=38384741&amp;Site=&amp;Menu=yes"><img src="{CSS_PATH}pa.gif" alt="客服QQ" border="0"></a> <br>
+        地址：吉林省吉林市龙潭区
+      </ul>
+    </div>
+    <div class="leftbox">
+      <h2>产品列表</h2>
+      <ul class="leftp">
+	  {if $top_parentid}
+		{pc:content action="category" catid="$top_parentid" num="15" siteid="$siteid" order="listorder ASC"}
+			{loop $data $r}
+			<li><a href="{$r[url]}">{$r[catname]}</a></li>
+			{/loop}
+        {/pc}
+	{/if}
+      </ul>
+    </div>
+  </div>
+  <div id="pright">
+    <div class="news">
+      <h3><span class="more"><a href="/"><img src="{CSS_PATH}more.jpg"></a></span>企业动态</h3>
+      <ul>
+	  {pc:content action="lists" catid="$r[catid]"  order="listorder DESC" num="11"} 
+                    {loop $data $r}
+                       <li><span class="date">{date('y-m-d',$r[inputtime])}</span><a href="{$r['url']}">{str_cut($r['title'],30)}</a></li>
+                    {/loop}
+            {/pc}
+      </ul>
+    </div>
+    <div class="about">
+      <h3><span class="more"><a href="/"><img src="{CSS_PATH}more.jpg"></a></span>公司简介</h3>
+      PHPCMS V9（后面简称V9）采用PHP5+MYSQL做为技术基础进行开发。V9采用OOP（面向对象）方式进行基础运行框架搭建。模块化开发方式做为功能开发形式。框架易于功能扩展，代码维护，优秀的二次开发能力，可满足所有网站的应用需求。 5年开发经验的优秀团队，在掌握了丰富的WEB开发经验和CMS产品开发经验的同时，勇于创新追求完美的设计理念，为全球多达10万网站提供助力，并被更多的政府机构、教育机构、事业单位、商业企业、个人站长所认可。 V9在保留2008版的特点的同时，对新版本作出重大的创新，以期待全新的PHPCMS系统服务更多的用户。<br>
+
+    </div>
+    <div class="clear"></div>
+    <div class="plist">
+      <h3><span class="more"><a href="/"><img src="{CSS_PATH}more.jpg"></a></span>产品展示</h3>
+      <ul>
+	  {pc:content  action="lists" catid="$r[catid]" order="updatetime DESC" thumb="1" num="12" return="info"}
+             {loop $info $v}
+             	<li><a href="{$v['url']}"><img src="{thumb($v[thumb],90,0)}" alt="{str_cut($v['title'],28)}" border="0" height="100" width="130"><span class="title">{str_cut($v['title'],28)}</span></a></li>
+              {/loop}
+              {/pc}    
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div id="link">
+  <h4>友情连接：</h4>
+  <ul>
+  {pc:link  action="type_list" siteid="$siteid" linktype="0" order="listorder DESC" num="10" return="dat"}
+		{loop $dat $v}
+           <li><a href="{$v[url]}" target="_blank">{$v[name]}</a> </li>
+		{/loop}
+  {/pc}
+  </ul>
+</div>
+{template "content","footer"}
